@@ -4,38 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Privacidade — Morais Apps</title>
-<meta name="description" content="Política de privacidade dos jogos da Morais Apps no Google Play.">
+<meta name="description" content="Política de privacidade dos apps da Morais Apps no Google Play.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <main>
   <h1>Política de Privacidade</h1>
-  <p class="muted">Vigente desde 12 de outubro de 2026</p>
+  <p class="muted">Vigente desde 2 de novembro de 2026</p>
 
-  <p>Esta política explica quais dados os jogos publicados pela <strong>Morais Apps</strong> no Google Play
+  <p>Esta política explica quais dados os apps publicados pela <strong>Morais Apps</strong> no Google Play
   tratam, para quê e quais são os seus direitos, de acordo com a Lei Geral de Proteção de Dados
   (Lei nº 13.709/2018 — LGPD). Ela vale para os seguintes apps:</p>
   <ul>
     <li>Bolhas da Floresta (<code>com.moraisapps.bolhasdafloresta</code>)</li>
     <li>Quebra-Cabeça de Blocos (<code>com.moraisapps.blockpuzzle</code>)</li>
     <li>Toque de Basquete (<code>com.moraisapps.basketballflick</code>)</li>
+    <li>Corretor de Redação IA (<code>com.moraisapps.chatgptbr</code>)</li>
   </ul>
+  <p>Os três primeiros são jogos e não têm servidor próprio. O Corretor de Redação IA usa um servidor
+  nosso para corrigir a redação; o que ele recebe está na seção 4.</p>
 
   <h2>1. Quem é o responsável</h2>
-  <p>Morais Apps, desenvolvedor dos jogos. Contato para qualquer assunto de privacidade:
+  <p>Morais Apps, desenvolvedor dos apps. Contato para qualquer assunto de privacidade:
   <a href="mailto:moraisdevelop@gmail.com">moraisdevelop@gmail.com</a>.</p>
 
   <h2>2. O que nós não coletamos</h2>
-  <p>Os jogos não pedem cadastro, login, nome, e-mail, telefone, fotos, contatos nem localização.
-  Nós não temos servidor próprio que receba dados dos jogadores.</p>
+  <p>Nenhum dos apps pede cadastro, login, nome, e-mail, telefone, fotos, contatos nem localização.
+  Os jogos não enviam nenhum dado para nós.</p>
 
   <h2>3. O que fica só no seu aparelho</h2>
-  <p>Seu progresso (fases, pontuação, moedas, vidas) e suas preferências (som e música) ficam
-  guardados apenas no armazenamento do próprio aparelho. Esses dados não são enviados para nós e
-  são apagados quando você desinstala o jogo ou limpa os dados do app.</p>
+  <p>Nos jogos, seu progresso (fases, pontuação, moedas, vidas) e suas preferências (som e música) ficam
+  guardados apenas no armazenamento do próprio aparelho. No Corretor de Redação IA, o histórico de correções
+  e o rascunho também ficam só no aparelho; o histórico pode ser apagado em <em>Sobre › Apagar histórico</em>.
+  Esses dados não são enviados para nós e são apagados quando você desinstala o app ou limpa os dados dele.</p>
 
-  <h2>4. Anúncios (Google AdMob)</h2>
-  <p>Os jogos são gratuitos e exibem anúncios do <strong>Google AdMob</strong>, serviço do Google.
+  <h2>4. Corretor de Redação IA: o que vai para o nosso servidor</h2>
+  <p>Para corrigir, o app envia por conexão criptografada (HTTPS) para o nosso servidor, hospedado na
+  <strong>Supabase</strong>:</p>
+  <ul>
+    <li>o <strong>tema e o texto da redação</strong>;</li>
+    <li>um <strong>identificador aleatório</strong> criado pelo app na instalação. Ele não é o ID de publicidade,
+    não é o número do aparelho e não identifica você; serve só para contar as correções do dia.</li>
+  </ul>
+  <p>O servidor repassa o tema e o texto a um <strong>provedor de inteligência artificial</strong> contratado, que
+  gera a correção. Nós <strong>não guardamos a redação</strong>: ela é usada só para gerar a resposta. O provedor
+  trata o texto conforme os termos de uso da API dele. Por isso, não escreva na redação dados pessoais seus
+  ou de outras pessoas.</p>
+  <p>No servidor ficam guardados apenas:</p>
+  <ul>
+    <li>o identificador aleatório, a data e quantas correções foram feitas no dia, para aplicar o limite
+    de correções grátis e evitar abuso;</li>
+    <li>quando você usa o botão <em>Reportar correção</em>: o identificador aleatório, o motivo escolhido e o
+    resumo gerado pela IA (nunca a redação), para revisarmos respostas ofensivas ou erradas.</li>
+  </ul>
+  <p>Esses registros são mantidos pelo tempo necessário a essas finalidades e depois eliminados.
+  A Supabase e o provedor de IA podem processar os dados em servidores fora do Brasil; nesses casos a
+  transferência segue as garantias previstas na LGPD (art. 33).</p>
+
+  <h2>5. Anúncios (Google AdMob)</h2>
+  <p>Os apps são gratuitos e exibem anúncios do <strong>Google AdMob</strong>, serviço do Google.
   Para exibir e medir anúncios e prevenir fraude, o AdMob pode coletar automaticamente:</p>
   <ul>
     <li>o ID de publicidade do Android;</li>
@@ -46,33 +73,39 @@
   <p>Esses dados são tratados pelo Google conforme a
   <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a> e a página
   <a href="https://policies.google.com/technologies/partner-sites">Como o Google usa dados de apps parceiros</a>.
-  Quando exigido por lei, o jogo pede seu consentimento antes de mostrar anúncios personalizados.
+  Quando exigido por lei, o app pede seu consentimento antes de mostrar anúncios personalizados.
   Você pode redefinir ou excluir o ID de publicidade em
   <em>Configurações do Android › Google › Anúncios</em>.</p>
-  <p>Anúncios premiados (vídeos que dão moedas ou jogadas extras) só aparecem quando você escolhe assisti-los.</p>
+  <p>Anúncios premiados (vídeos que dão moedas, jogadas ou correções extras) só aparecem quando você escolhe assisti-los.</p>
 
-  <h2>5. Com quem os dados são compartilhados</h2>
-  <p>Somente com o Google, pelo AdMob, para as finalidades descritas acima. Não vendemos dados.</p>
+  <h2>6. Com quem os dados são compartilhados</h2>
+  <p>Com o Google, pelo AdMob, e, no Corretor de Redação IA, com a Supabase (hospedagem) e o provedor de IA,
+  que atuam como operadores só para as finalidades descritas acima. Não vendemos dados.</p>
 
-  <h2>6. Base legal</h2>
-  <p>O tratamento para exibição de anúncios se apoia no legítimo interesse de manter o jogo gratuito
-  e, para anúncios personalizados onde a lei exige, no seu consentimento, que pode ser retirado a qualquer momento.</p>
+  <h2>7. Base legal</h2>
+  <p>O tratamento para exibição de anúncios se apoia no legítimo interesse de manter o app gratuito
+  e, para anúncios personalizados onde a lei exige, no seu consentimento, que pode ser retirado a qualquer momento.
+  No Corretor de Redação IA, o envio da redação é necessário para prestar o serviço que você pede (correção),
+  e o controle de limite e as denúncias se apoiam no legítimo interesse de evitar abuso e manter a qualidade.</p>
 
-  <h2>7. Crianças</h2>
-  <p>Os jogos não são direcionados a menores de 13 anos e não coletamos conscientemente dados pessoais
+  <h2>8. Crianças</h2>
+  <p>Os apps não são direcionados a menores de 13 anos, e o Corretor de Redação IA é destinado a maiores de 16 e não coletamos conscientemente dados pessoais
   de crianças. Se você acredita que uma criança nos forneceu dados, fale com a gente pelo e-mail acima.</p>
 
-  <h2>8. Seus direitos</h2>
+  <h2>9. Seus direitos</h2>
   <p>Pela LGPD você pode pedir confirmação de tratamento, acesso, correção, anonimização, eliminação,
   portabilidade e informações sobre compartilhamento, além de revogar consentimento. Como não guardamos
-  dados seus em servidor próprio, pedidos sobre dados de anúncios são atendidos diretamente pelo Google;
+  redações nem dados que identifiquem você, pedidos sobre dados de anúncios são atendidos diretamente pelo Google;
   ajudamos no que estiver ao nosso alcance pelo e-mail
-  <a href="mailto:moraisdevelop@gmail.com">moraisdevelop@gmail.com</a>.</p>
+  <a href="mailto:moraisdevelop@gmail.com">moraisdevelop@gmail.com</a>.
+  No Corretor de Redação IA, o identificador aleatório não está ligado ao seu nome nem a nenhum dado seu;
+  ao desinstalar o app ou limpar os dados dele, um identificador novo é criado e o antigo deixa de ser usado.</p>
 
-  <h2>9. Segurança</h2>
-  <p>A comunicação do SDK de anúncios com o Google é feita por conexão criptografada (HTTPS).</p>
+  <h2>10. Segurança</h2>
+  <p>A comunicação dos apps com o Google e com o nosso servidor é feita por conexão criptografada (HTTPS).
+  Os registros do servidor só podem ser lidos por nós.</p>
 
-  <h2>10. Mudanças nesta política</h2>
+  <h2>11. Mudanças nesta política</h2>
   <p>Se esta política mudar, a nova versão será publicada nesta página com a data de vigência atualizada.</p>
 
   <footer><a href="../">Morais Apps</a></footer>
